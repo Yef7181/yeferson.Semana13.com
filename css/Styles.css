@@ -1,0 +1,309 @@
+/* =====================================
+   ESTILOS GENERALES
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #4B0082; /* azul violeta elegante */
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+nav {
+    background-color: rgba(0, 0, 0, 0.85);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px;
+    gap: 30px;
+}
+
+.navbar li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: #FFD700;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+header {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.5); /* oscurece la imagen para mejorar legibilidad */
+}
+
+header .header-content {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    font-weight: 400;
+}
+
+/* =====================================
+   SECCIONES
+===================================== */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #FFD700;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* =====================================
+   IMÁGENES
+===================================== */
+.imagen-sobre-nosotros {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.servicio-imagen {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* =====================================
+   SERVICIOS
+===================================== */
+.DIVISION_0 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.DIVISION1, .DIVISION2 {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1 1 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.DIVISION1:hover, .DIVISION2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+}
+
+.DIVISION1 h3, .DIVISION2 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.DIVISION1 p, .DIVISION2 p {
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+/* =====================================
+   MULTIMEDIA
+===================================== */
+#multimedia video, #multimedia audio {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* =====================================
+   TESTIMONIOS
+===================================== */
+#testimonios {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px 25px;
+    border-radius: 12px;
+    max-width: 700px;
+    text-align: center;
+    font-style: italic;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #FFD700;
+}
+
+/* =====================================
+   FORMULARIO DE CONTACTO
+===================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+form input, form textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+form button {
+    background-color: #00CED1;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #20B2AA;
+    transform: translateY(-3px);
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+footer {
+    background-color: #FFE4C4;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: auto;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+}
+
+footer p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+footer h4 {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #20B2AA;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #008B8B;
+}
+
+/* =====================================
+   RESPONSIVIDAD
+===================================== */
+@media (max-width: 1024px) {
+    .DIVISION_0 {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    .testimonial {
+        max-width: 95%;
+    }
+
+    form input, form textarea {
+        width: 95%;
+    }
+}
